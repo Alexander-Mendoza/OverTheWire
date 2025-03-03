@@ -1,0 +1,12 @@
+#Para conectarse a este nivel se debe proporcionar la contraseña obtenida en bandit0 y así para los demás niveles.
+
+sshpass -p 'ZjLjTmM6FvvyRnrb2rfNWOZOTa6ip5If' ssh bandit1@bandit.labs.overthewire.org -p 2220
+
+--Para resolver este nivel se puede hacer de varias formas.
+
+1. cat ./- 
+2. cat /home/bandit1/-
+3. cat ~/-
+4. cat ./*
+
+Hay distintas formas de hacerlo que nos llevan al mismo resultado
