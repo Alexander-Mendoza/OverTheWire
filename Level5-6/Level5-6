@@ -1,0 +1,5 @@
+Para resolver este nivel solo se debe ejecutar el siguiente comando:
+
+find . -size 1033c !  -executable| xargs file | grep ASCII |awk '{print $1}' FS=":" | xargs cat | xargs
+
+Busca desde el directorio actual todos los archivos que tengan tamaño de 1033 bytes, que no sea ejecutable y que pueda ser leido por humanos. Luego con awk le pido el primer argumento separados por ":", se le hace un cat al archivo y se quitan los espacios demás con xargs. 
