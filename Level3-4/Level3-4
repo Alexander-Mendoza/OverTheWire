@@ -1,0 +1,12 @@
+#Para resolver este nivel también hay varias formas, las mas sencillas son:
+Todos los comando se deben ejecutar dentro del directorio inhere.
+
+cd inhere/
+
+Dentro inhere/ se encuentra un archivo oculto con "ls -a" podemos listar los archivos ocultos y ver el nombre.
+
+1. cat ...Hiding-From-You
+
+2. find . -type f -name ...Hiding-From-You | xargs cat 
+Este comando lo que hace es que desde el directorio donde me encuentro busca todos los archivos que sean de tipo "file" y busca por el nombre del archivo, cabe recalcalcar que para que esto funcione se debe saber el nombre del archivo. Con xargs hago que el ouput que me retorna el primer comando, lo pase como parámetro para el cat.3
+
