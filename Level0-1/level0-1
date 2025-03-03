@@ -1,0 +1,7 @@
+#Para conectarse al primer nivel, solo se debe hacer:
+sshpass -p 'bandit0' ssh bandit0@bandit.labs.overthewire.org -p 2220 
+
+#En el primer nivel, solo es de leer el archivo que se encuentra en el directorio HOME.
+
+cat readme | tail -n 2 | xargs | awk 'NF{print $NF}'
+
