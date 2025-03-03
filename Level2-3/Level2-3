@@ -1,0 +1,7 @@
+--Al igual que el nivel anterior, este nivel se puede hacer de varias formas.
+
+1. cat "spaces in this filename"
+2. cat spaces\ in\ this\ filename 
+3. cat ./*
+
+Y así de varias formas.
