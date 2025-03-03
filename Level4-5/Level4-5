@@ -1,0 +1,9 @@
+Para completar este nivel se tiene que ejecutar el comando "file" por cada archivo que hay dentro de la carpeta Inhere, buscando el ASCCI TEXT, que es el que los humanos pueden leer.
+
+!OJO --> Se debe estar dentro de la carpeta inhere: cd inhere
+
+Comando a ejecutar: 
+
+file ./* | grep -v "data" | awk '{print $1}' FS=":" | xargs cat
+
+Este comando muestra la contraseña.
