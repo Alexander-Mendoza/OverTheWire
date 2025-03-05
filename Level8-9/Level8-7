@@ -1,0 +1,4 @@
+#Para este nivel solo se tiene que ordenar el data.txt con sort y luego ejecutar el comando unique -u 
+#para obtener la única cadena de texto que no se repite
+
+sort data.txt | uniq -u
