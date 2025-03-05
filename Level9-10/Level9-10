@@ -1,0 +1,3 @@
+#Primero el comando strings se muestran las cadenas imprimibles de un archivo, luego con grep busco todos las línas que tenga una cadena de ====, por último con tail -n 1 indico que quiero ver la última línea y con cut que me muestre el segundo argumento delimitado por espacios.
+
+cat data.txt | strings | grep ========= | tail -n 1 | cut -d ' ' -f 2
