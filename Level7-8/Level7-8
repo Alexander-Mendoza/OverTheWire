@@ -1,0 +1,11 @@
+Este nivel es sencillo, solo debe ejecutar el siguiente comando dentro del directorio de usuario.
+
+grep "millionth" data.txt | xargs | awk 'NF{print $NF}'
+
+
+#Explicacion.
+
+grep "millionth" data.txt --> Buscar la palabra entre paréntesis dentro del archivo data.txt
+xargs --> Elimina los espacios entre la palabra y la contraseña
+awk 'NF{print $NF}' --> Devuelve el último argumento de la cadena de texto.  
+
