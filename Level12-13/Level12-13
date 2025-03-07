@@ -1,0 +1,16 @@
+#Indicaciones.
+#Entrar a bandit12
+
+1. Se te debe copiar el contenido dentro del data.txt a la máquina local
+	touch data.txt  ---> Ahí copiar el contenido
+	Ya deje un archivo en hexadecimal de cuando yo realice el nivel.
+
+2. Descargar el script decompressed.sh dentro de esta misma carpeta la máquina local o crear un archivo y pegar el código.
+
+3. Darle premisos de ejecución 
+	chmod +x decompressed.sh
+
+4. Ejecutar el script.
+	./decompressed.sh -d data.txt
+
+
