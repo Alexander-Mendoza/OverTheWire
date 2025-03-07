@@ -1,0 +1,3 @@
+Con tr se le dice que quiero que rote, y que en lugar que me tome el abecedario normal me lo tome con 13 posiciones rotadas. Pero para eso se debe contar hacia atrás. Se puede hacer lo mismo tomando y contando desde [N-Za-M]
+
+cat data.txt | tr '[G-ZA-Fg-za-f]' '[T-ZA-St-za-s]' | awk 'NF{print $NF}'
