@@ -1,0 +1,3 @@
+Se tiene que decodificar el text con base 64 -d y luego con awk pido el último argumento:
+
+cat data.txt | base64 -d | awk 'NF{print $NF}'
