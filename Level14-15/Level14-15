@@ -1,0 +1,5 @@
+Se nos pide mandar la contraseña del usuario anterior usando netcat, al localhost en el puerto 30000
+
+nc localhost 30000
+
+Luego colocamos la contraseña del nivel anterior
