@@ -1,0 +1,18 @@
+--Para este nivel solo se debe crear un archivo temporal.
+
+cd $(mktemp -d)
+
+--Luego crear un archivo:
+touch script.sh
+
+--Darle privilegios de ejecución:
+chmod +x script.sh
+
+--Copiar el script.sh que está dentro de esta carpeta y ejecutar el script.
+./script.sh
+
+--Automáticamente tiene que conectar al siguiente nivel
+
+--En la ruta /etc/bandit_pass/bandit17, se encontrara la contraseña del nivel.
+
+cat /etc/bandit_pass/bandit17
