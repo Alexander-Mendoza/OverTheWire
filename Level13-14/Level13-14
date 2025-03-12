@@ -1,0 +1,7 @@
+#Para este nivel nos dan una clave privada ssh, con la cual podremos acceder al siguiente nivel.
+
+ssh -i sshkey.private bandit14@localhost -p 2220
+
+Solo hay que conectarse mediante ssh con la clave privada al siguiente usuario que sería bandit14
+
+Luego en cat /etc/bandit_pass/bandit14 se encuentra la contraseña
