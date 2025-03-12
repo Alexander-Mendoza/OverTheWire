@@ -1,0 +1,3 @@
+Este nivel es igual al anterior, lo único que en lugar de usar nc se utiliza ncat, que sirve para encriptar el tráfico usando SSL.
+
+ncat --ssl localhost 30001
