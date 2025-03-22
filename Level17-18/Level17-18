@@ -1,0 +1,5 @@
+Con el siguiente comando se puede obtener la contraseña al siguiente nivel.
+
+diff passwords.new passwords.old | head -n 2 | tail -n 1 | awk '{print $2}'
+
+--> Se aplica un diff que sirve para ver la diferencia entre 2 archivos, luego solo obtengo la contraseña con head y tail, pidiendo el segundo argumento con awk
