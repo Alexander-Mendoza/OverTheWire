@@ -1,0 +1,10 @@
+#Se deben abrir 2 terminales, en ambas se deben conectar al bandit20
+
+#Paso 1: En la primer terminal se debe ejecutar lo siguiente:
+
+nc -nlvp 4646   ---> ponerse en escucha por el puerto 4646
+
+#Paso 2: En la terminal 2 ejecutar lo siguiente 
+./suconnect 4646   ---> Se usa el permiso SUID para poder conectarse a un puerto
+
+#Paso 3: En la máquina 1 proporcionar la contraseña de bandit20 

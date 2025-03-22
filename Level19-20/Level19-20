@@ -1,0 +1,4 @@
+#En ese nivel se hace uso de los permisos SUID, el binario que tenga este permiso otorga que los usuarios puedan ejecutar comandos de forma
+#privilegiada por un tiempo determinado:
+
+./bandit20-do cat /etc/bandit_pass/bandit20
