@@ -1,0 +1,3 @@
+#Para este nivel la bash ha sido modificada para al intentar entrar a la máquina automáticamente nos saque, entonces se deben ejecutar comandos desde fuera:
+
+sshpass -p 'x2gLTTjFwMOhQ8oWNbMN362QKxfRqGlO' ssh bandit18@bandit.labs.overthewire.org -p 2220 cat readme
