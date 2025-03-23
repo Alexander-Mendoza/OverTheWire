@@ -1,0 +1,39 @@
+#Al igual que en el ejercicio anterior se trabaja con tareas cron.
+
+1) Entrar a la carpeta donde se define la tarea cron.
+~ cd /etc/cron.d/
+
+2) Leer el archivo de la tarea que se está ejecutando.
+~ cat cronjob_bandit23
+
+Respuesta:
+
+@reboot bandit23 /usr/bin/cronjob_bandit23.sh  &> /dev/null
+* * * * * bandit23 /usr/bin/cronjob_bandit23.sh  &> /dev/null
+
+Se está ejecutando un script cada minuto.
+
+3) Leemos el script
+
+~ cat /usr/bin/cronjob_bandit23.sh
+
+Respuesta:
+
+#!/bin/bash
+
+myname=$(whoami)  #Variable que guarda el usuario
+mytarget=$(echo I am user $myname | md5sum | cut -d ' ' -f 1) #Convierte has la cadena "I am user bandit23" y obtiene el primer argumento
+
+echo "Copying passwordfile /etc/bandit_pass/$myname to /tmp/$mytarget" # Copia la contraseña de bandit23 y la guarda en el archivo que tiene como nombre el hash generado
+
+4) La solución sería esta:
+
+~ mytarget=$(echo I am user bandit23 | md5sum | cut -d ' ' -f 1)
+Creamos una variable que nos guarde el hash obtenido 
+
+Y como la contraseña del siguiente nivel se está almacenando en el fichero que tiene como nombre ese hash solo accedemos a el:
+
+~cat /tmp/$mytarget
+
+
+
