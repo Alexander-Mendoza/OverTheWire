@@ -1,0 +1,26 @@
+#En este nivel se juega con las tareas cron, en primer lugar se debe entrar a la carpeta en donde se está ejecutando:
+
+~cd /etc/cron.d/
+
+2) Leer el archivo cron
+
+~cat cronjob_bandit22 
+
+Como respuesta obtenemos lo siguiente:
+@reboot bandit22 /usr/bin/cronjob_bandit22.sh &> /dev/null
+* * * * * bandit22 /usr/bin/cronjob_bandit22.sh &> /dev/null
+
+Nos dice que se está ejecuando una tarea cron cada minuto todos los días.
+El comando que se está ejecuando es un script.
+
+3) Hacer un cat al script para ver que está ejecutando:
+~cat /usr/bin/cronjob_bandit22.sh
+
+Respueta:
+#!/bin/bash
+chmod 644 /tmp/t7O6lds9S0RqQh9aMcz6ShpAoZKF7fgv --> Otorga permisos al archivo llamado "t7O6lds9S0RqQh9aMcz6ShpAoZKF7fgv" en la carpeta /tmp
+cat /etc/bandit_pass/bandit22 > /tmp/t7O6lds9S0RqQh9aMcz6ShpAoZKF7fgv --> Hace un cat a la contraseña de bandit22 y lo introduce en la carpeta.
+
+4) Hacer un cat al archivo que contiene la contraseña de bandit22.
+
+~cat /tmp/t7O6lds9S0RqQh9aMcz6ShpAoZKF7fgv
