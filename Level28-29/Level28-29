@@ -1,0 +1,22 @@
+Para este nivel seguimos con git y github.
+
+Paso 1)
+  Creamos un directorio temporal.
+  ~ cd $(mktemp -d)
+
+Paso 2) 
+  Clonamos el repositorio.
+  La contraseña que se utilzará para clonar el repo tiene que ser la de bandit27
+  git clone ssh://bandit28-git@localhost:2220/home/bandit28-git/repo
+
+Paso 3)
+  Estamos jugando con commits, la contraseña se encuentra en el commit anterior.
+  En primer lugar tenemos que hacer checkout al commit anterior ya así obtener la contraseña.
+  En mi caso el commit que tiene la contraseña contiene el siguiente SHA.
+
+  ~ git checkout fb0df1358b1ff146f581651a84bae622353a71c0
+
+Paso 4)
+  Ejecutar el siguiente comando:
+
+  ~ cat README.md | xargs | awk 'NF{print $NF}'
