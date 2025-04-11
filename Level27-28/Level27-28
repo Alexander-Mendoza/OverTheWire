@@ -1,0 +1,14 @@
+En este ejercicio entremos a git y github.
+
+Paso 1)
+  Creamos un directorio temporal.
+  ~ cd $(mktemp -d)
+
+Paso 2) 
+  Clonamos el repositorio.
+  La contraseña que se utilzará para clonar el repo tiene que ser la de bandit26
+  ~ git clone ssh://bandit27-git@localhost:2220/home/bandit27-git/repo
+
+Paso 3)
+  Ejecutar el siguiente comando
+  ~ cat repo/README | awk 'NF{print $NF}'
