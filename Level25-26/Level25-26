@@ -1,0 +1,24 @@
+Este nivel es bastante especial.
+
+Paso 1)
+  Conectarse a bandit26 utilizando la clave privada de este mismo.
+  ~ ssh -i bandit26.sshkey bandit26@localhost -p 2220
+
+Paso 2)
+  A la hora de ejecutar ese comando se debe minimizar la pantalla a tal punto de obligar hacer un more a la consola
+
+Paso 3)
+  Presionando la tecla "v" nos colocamos en el modo visual, luego presionamos la tecla ESC, para luego colocar ":"
+  Al hacer esto entramos en un punto donde podemos editar variables ya que no se esta utilizando una bash
+
+Paso 4)
+  Estando en ese mismo estado colocar lo siguiente:
+  ~ set shell=/bin/bash
+
+Paso 5)
+  Volvemos a hacer el paso 4, presionando ESC y luego ":" y colocamos "shell"
+  Con esto ya tenemos una bash y podemos acceder a la contraseña de bandit26.
+
+Paso 6)
+  Obtenemos la contraseña de bandit26
+  ~ cat /etc/bandit_pass/bandit26 
