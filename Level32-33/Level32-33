@@ -1,0 +1,11 @@
+Este nivel es bastante curioso, ya que al entrar se usa una UPPERCASE SHELL, y no deja ejecutar comando.
+Al final de todo se usa los argumentos posicionales, en el trasfondo de la shell que se está manejando es un script que nos convierte todo
+a mayúscula, entonces ese script lo ejecuta una terminal.
+
+Usando el argumento posicional $0 podemos ingresar a la shell que ejecuta ese comando.
+
+  ~ $0
+
+Luego con el siguiente comando obtenemos la contraseña:
+  
+  ~ cat /etc/bandit_pass/bandit33
