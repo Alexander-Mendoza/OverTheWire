@@ -1,0 +1,24 @@
+Solución:
+
+Paso 1)
+
+  Creamos un directorio temporal.
+  ~ cd $(mktemp -d)
+
+Paso 2) 
+  Clonamos el repositorio.
+  La contraseña que se utilzará para clonar el repo tiene que ser la de bandit30.
+  ~ git clone ssh://bandit30-git@localhost:2220/home/bandit30-git/repo
+
+Paso 3) 
+  Entrar al repo.
+  ~ cd repo/
+
+  En este punto jugamos con tags dentro de git.
+  Con el siguiente comando: ~ git tag --> Podemos listar tags dentro de git, basicamente son ramas firmadas que no permutan, es decir siempre se mantienen iterables.
+  Dentro de este nivel se encuentra una sola tag que se llama secret.
+
+Paso 4)
+  Ejecutar el siguiente comando.
+  
+  ~ git show secret
