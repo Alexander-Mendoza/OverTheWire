@@ -1,0 +1,30 @@
+Solución:
+
+Paso 1)
+  Creamos un directorio temporal.
+  ~ cd $(mktemp -d)
+
+Paso 2) 
+  Clonamos el repositorio.
+  La contraseña que se utilzará para clonar el repo tiene que ser la de bandit29.
+
+  ~ git clone ssh://bandit29-git@localhost:2220/home/bandit29-git/repo
+
+Paso 3)
+  Al igual que en el nivel anterior tenemos que entrar al repositorio.
+  ~ cd repo
+
+  Este nivel consta en que no está la contraseña en la rama actual, entonces jugamos con branchs.
+
+  Con:
+  ~ git branch -r 
+  Podemos ver todas las ramas remotas, el README.md nos dice que la contraseña no se encuentra en producción pero si está en la rama dev.
+
+  Entonces con el siguiente comando cambiamos de rama y así podemos ver la contraseña.
+
+  ~ git switch dev 
+
+Paso 4)
+
+  Ejecutar el siguiente comando:
+  ~ cat README.md | xargs | awk 'NF{print $NF}'
