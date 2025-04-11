@@ -1,0 +1,5 @@
+!! Para poder acceder a este nivel y lograr obtener una bash, ver el nivel anterior:
+
+En este nivel solo se aplica permisos SUID, básicamente ejecuando un comando obtendremos la contraseña de bandit27
+
+~ ./bandit27-do cat /etc/bandit_pass/bandit27
